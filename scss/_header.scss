@@ -1,0 +1,159 @@
+.header {
+   background-color: $grey;
+   min-height: 60px;
+   padding-top: 13px;
+   padding-bottom: 13px;
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__contacts {
+      display: none;
+      position: absolute;
+      background-color: $grey;
+      top: 61px;
+      left: 0;
+      right: 0;
+      padding: 30px 15px;
+      color: $white;
+   }
+
+   &__logo {
+      width: 124px;
+   }
+
+   &__contacts-burger {
+      display: block;
+      width: 27px;
+      height: 14px;
+      background-image: url("../img/burger.svg");
+   }
+}
+
+.contacts {
+   &__item {
+      margin-bottom: 50px;
+   }
+
+   &__item:last-child {
+      margin-bottom: 0;
+   }
+
+   &__head {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 25px;
+      text-transform: uppercase;
+
+      margin-bottom: 7px;
+      &--social {
+         margin-bottom: 12px;
+      }
+   }
+
+   &__link {
+      font-size: 16px;
+      line-height: 22px;
+   }
+
+   &__social-list {
+      display: flex;
+   }
+
+   &__social-item:not(:last-child) {
+      margin-right: 18px;
+   }
+
+   &__social-link {
+      display: block;
+      width: 26px;
+      height: 26px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &--whatsapp {
+         background-image: url("../img/social/whatsapp.svg");
+      }
+
+      &--instagram {
+         background-image: url("../img/social/instagram.svg");
+      }
+
+      &--facebook {
+         background-image: url("../img/social/facebook.svg");
+      }
+
+      &--telegram {
+         background-image: url("../img/social/telegram.svg");
+      }
+   }
+}
+
+@media (min-width: $md) {
+   .header {
+      min-height: 100px;
+      padding: 28px 0;
+
+      &__contacts {
+         top: 101px;
+         padding: 40px;
+      }
+
+      &__logo {
+         width: 180px;
+      }
+   }
+   .contacts {
+      &__list {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      &__item {
+         margin-bottom: 0;
+      }
+   }
+}
+
+@media (min-width: $lg) {
+   .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      padding: 50px 0;
+
+      &__container {
+         height: 100%;
+         flex-direction: column;
+      }
+
+      &__contacts {
+         display: block;
+         position: static;
+      }
+
+      &__contacts-burger {
+         display: none;
+      }
+   }
+
+   .contacts {
+      &__list {
+         flex-direction: column;
+      }
+
+      &__item:not(:last-child) {
+         margin-bottom: 50px;
+      }
+   }
+}
+
+@media (min-width: $xxl) {
+   .header {
+      padding-top: 60px;
+   }
+}
