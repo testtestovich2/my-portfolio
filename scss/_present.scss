@@ -1,0 +1,158 @@
+.present {
+   &__photo {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 20px;
+   }
+
+   &__group-title {
+      margin-bottom: 18px;
+   }
+
+   &__title {
+      margin-bottom: 10px;
+      font-size: 34px;
+      font-weight: 700;
+      line-height: 120%;
+      text-transform: uppercase;
+   }
+
+   &__subtitle {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 120%;
+      text-transform: uppercase;
+   }
+
+   &__description {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+   }
+
+   &__order-btn {
+      background-color: $orange;
+      padding: 16px 60px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 140%;
+      text-transform: uppercase;
+      color: $white;
+      border: 1px solid transparent;
+      transition: all 0.5s;
+   }
+
+   &__order-btn:hover {
+      color: $orange;
+      background-color: $white;
+      border: 1px solid $orange;
+   }
+}
+
+@media (min-width: $xs) {
+   .present {
+      &__container {
+         display: flex;
+      }
+
+      &__photo {
+         width: 50%;
+         margin-right: 15px;
+         margin-bottom: 0;
+      }
+
+      &__content {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+      }
+
+      &__title {
+         font-size: 40px;
+      }
+
+      &__subtitle {
+         font-size: 18px;
+      }
+
+      &__description {
+         font-size: 16px;
+      }
+
+      &__order-btn {
+         font-size: 18px;
+      }
+   }
+}
+
+@media (min-width: $md) {
+   .present {
+      padding-top: 70px;
+
+      &__photo {
+         width: 370px;
+         margin-right: 30px;
+      }
+
+      &__groud-title {
+         margin-bottom: 40px;
+      }
+
+      &__title {
+         margin-bottom: 24px;
+      }
+
+      &__description {
+         margin-bottom: 60px;
+      }
+
+      &__order-btn {
+         padding: 24px 82px;
+      }
+   }
+}
+
+@media (min-width: $lg) {
+   .present {
+      position: relative;
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         display: block;
+         background-color: $grey;
+         z-index: -1;
+         width: 40%;
+         height: 100%;
+      }
+   }
+}
+
+@media (min-width: $xxl) {
+   .present {
+      &__photo {
+         width: 445px;
+      }
+
+      &__group-title {
+         margin-bottom: 60px;
+      }
+
+      &__title {
+         margin-bottom: 20px;
+         font-size: 50px;
+      }
+
+      &__subtitle {
+         font-size: 20px;
+      }
+
+      &__description {
+         font-size: 18px;
+      }
+   }
+}
