@@ -143,7 +143,59 @@
       </section>
    </main>
 
+   <div class="page__overlay page__overlay--modal-callback">
+      <div class="modal">
+         <h2 class="modal__title">Заполните форму и я свяжусь с Вами</h2>
+         <form action="#" class="modal__form callback">
+            <fieldset class="callback__group">
+               <legend class="visually-hidden">Личные данные</legend>
+               <label class="callback__label">
+                  <span class="callback__label-text">ФИО</span>
+                  <input type="text" class="callback__input" name="bio" placeholder="Введите ваше ФИО">
+               </label>
+
+               <label class="callback__label">
+                  <span class="callback__label-text">Телефон</span>
+                  <input type="text" class="callback__input" name="phone" placeholder="Введите ваш номер телефона">
+               </label>
+            </fieldset>
+
+            <fieldset class="callback__group connect">
+               <legend class="connect__title">Где удобнее связаться?</legend>
+               <label class="connect__label">
+                  <input type="radio" class="connect__radio" value="telegram" name="connect">
+                  <span class="connect__text">Telegram</span>
+               </label>
+               <label class="connect__label">
+                  <input type="radio" class="connect__radio" value="whatsapp" name="connect">
+                  <span class="connect__text">WhatsApp</span>
+               </label>
+               <label class="connect__label">
+                  <input type="radio" class="connect__radio" value="viber" name="connect">
+                  <span class="connect__text">Viber</span>
+               </label>
+               <label class="connect__label">
+                  <input type="radio" class="connect__radio" value="call" name="connect">
+                  <span class="connect__text">Позвонить</span>
+               </label>
+            </fieldset>
+
+            <button type="submit" class="callback__btn">Заказать</button>
+         </form>
+
+         <button class="modal__close">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect width="29.1681" height="1.94454" rx="0.972271"
+                  transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 20.625)" fill="#282626" />
+               <rect width="29.1681" height="1.94454" rx="0.972271"
+                  transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.375 0)" fill="#282626" />
+            </svg>
+         </button>
+      </div>
+   </div>
+
    <script src="js/swiper-bundle.min.js"></script>
+   <script src="js/jquery-3.6.0.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 

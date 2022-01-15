@@ -22,3 +22,15 @@ new Swiper('.swiper', {
       }
    }
 })
+
+$('.header__contacts-burger').click(function () {
+   $('.header__contacts').slideToggle();
+})
+
+$('.present__order-btn').click(() => {
+   $('.page__overlay--modal-callback').fadeIn(400).css('display', 'flex')
+})
+
+$('.modal__close').click(() => {
+   $('.page__overlay--modal-callback').fadeOut(400)
+})
